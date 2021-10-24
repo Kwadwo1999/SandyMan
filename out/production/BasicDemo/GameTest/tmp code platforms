@@ -1,0 +1,64 @@
+// make another platform
+        Shape platform1Shape = new BoxShape(10, 0.5f);
+        StaticBody platform1 = new StaticBody(this, platform1Shape);
+
+        platform1.setPosition(new Vec2(10, -7f));
+        //platform1.setFillColor(Color.black);
+
+        // make another platform
+        Shape platform2Shape = new BoxShape(3, 0.5f);
+        StaticBody platform2 = new StaticBody(this, platform2Shape);
+
+        platform2.setPosition(new Vec2(-10, -7f));
+
+        // make another platform
+        Shape platform3Shape = new BoxShape(14, 0.5f);
+        StaticBody platform3 = new StaticBody(this, platform3Shape);
+
+
+        platform3.setPosition(new Vec2(-5, -2));
+
+
+        //make a platform
+        Shape platform4Shape = new BoxShape(7, 0.5f);
+        StaticBody platform4 = new StaticBody(this, platform4Shape);
+        //refers to an object of a class new VirtualWorld()
+
+        platform4.setPosition(new Vec2(-9, 4));
+
+        //make a platform
+        Shape platform5Shape = new BoxShape(7, 0.5f);
+        StaticBody platform5 = new StaticBody(this, platform5Shape);
+        //refers to an object of a class new VirtualWorld()
+
+        platform5.setPosition(new Vec2(9, 4));
+
+        //make a platform
+        Shape platform6Shape = new BoxShape(10, 0.5f);
+        StaticBody platform6 = new StaticBody(this, platform6Shape);
+        //refers to an object of a class new VirtualWorld()
+
+        platform6.setPosition(new Vec2(5, 9.2f));
+
+      protected void paintBackground(Graphics2D g){ g.drawImage(background,0,0, (ImageObserver) this);
+    }
+
+    protected void paintForeground(Graphics2D g) {
+        // System.out.println("called");
+        g.drawString("red ball score: "+getGoodCharacter().getHealthCount()+ "   health: "+getGoodCharacter().getHealthCount(),60,100);
+
+    }
+
+
+
+
+protected void paintBackground(Graphics2D g){
+        g.drawImage(background,0,0, (ImageObserver) this);
+    }
+
+    @Override
+    protected void paintForeground(Graphics2D g) {
+        // System.out.println("called");
+        g.drawString("red ball score: "+getCowboy().getRedBallCount()+ "   health: "+getCowboy().getHealthCount(),60,100);
+
+    }

@@ -1,0 +1,112 @@
+ //public void addMenuItems(){
+        JPanel jp = new JPanel();
+        jp.setLayout(new BoxLayout(jp, BoxLayout.Y_AXIS));
+        playButton = new JButton();
+
+        playButton.setText("Play");
+        playButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                gameLevel.start();
+            }
+        });
+        pauseButton = new JButton();
+        pauseButton.setText("Pause");
+        pauseButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //pause();
+            }
+        });
+
+        quitButton = new JButton();
+        quitButton.setText("Quit");
+
+        quitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
+
+        muteButton = new JButton();
+        muteButton.setText("Mute Sound");
+
+
+        jp.add(playButton);
+        jp.add(pauseButton);
+        jp.add(quitButton);
+        jp.add(muteButton);
+        frame.add(jp, BorderLayout.WEST);
+
+    }
+
+                if(goodCharacter.getHealthCount() == 1 || goodCharacter.getHealthCount() == 0){
+
+                    this.game.gameLevel.stop();
+                    JFrame jframe = new JFrame();
+                    jframe.setContentPane(new ExitPage().PannelMain);
+                    jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    jframe.pack();
+                    jframe.setSize(200,300);
+                    jframe.setVisible(true);
+                }
+
+
+                /* package GameTest;
+
+                import city.cs.engine.*;
+
+                import java.awt.event.MouseAdapter;
+                import java.awt.event.MouseEvent;
+
+                public class MouseHandler extends MouseAdapter {
+
+                    private static final float RADIUS = 1f;
+
+                    private static final Shape ballShape
+                            = new CircleShape(RADIUS);
+
+                    private static final BodyImage ballImage
+                            = new BodyImage("data/books.png", 2*RADIUS);
+
+                    private WorldView view;
+
+                    public MouseHandler(WorldView view) {
+                        this.view = view;
+                    }
+
+                    /**
+                     * Create a bowling ball at the current mouse position.
+                     * @param e event object containing the mouse position
+                     */
+                    public void mousePressed(MouseEvent e) {
+                        DynamicBody ball = new DynamicBody(view.getWorld(), ballShape);
+                        ball.setPosition(view.viewToWorld(e.getPoint()));
+                        ball.addImage(ballImage);
+                    }
+                }
+
+
+                */
+
+
+                package GameTest;
+
+                import city.cs.engine.*;
+
+                public class Spikes extends Walker {
+                    private static final Shape shape =
+                            new PolygonShape(-0.04f,2.44f, -4.43f,0.6f, -4.45f,-2.3f, -1.18f,-2.44f, 2.71f,-2.28f, 4.55f,-0.31f, 4.24f,1.86f, 0.52f,2.38f
+                            );
+                    private static final BodyImage image = new BodyImage("data/Spikes.png",2);
+
+
+                    public Spikes(World world) {
+
+                        super(world,shape);
+                       // addImage(image);
+                    }
+                }
+
+                */
